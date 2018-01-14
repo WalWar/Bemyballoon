@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800')
+
+@import 'font-face'
+@include fontFace('MuseoSansCyrl', '../fonts/MuseoSansCyrl-300')
+
+body
+	font-size: 25px
+	font-family: "Open Sans"  
+	line-height: 1.4
+
+
+.wrapper
+	display: flex
+	width: 100%
+	height: 100vh
+    
+.menu
+	display: flex
+	position: relative
+	flex: 5
+	align-items: flex-end
+	background: url(../img/bg.jpg) center left no-repeat
+	background-size: cover
+	&__container	
+		background: rgba(255, 255, 255, 0.75)
+		display: flex
+		position: relative
+		z-index: 9999
+		justify-content: center
+		width: 100%
+		min-height: 56px
+		align-items: center
+	.nav
+    	display: flex
+    	flex-wrap: wrap
+    	justify-content: space-between
+    	padding: 7px 165px;
+    	.nav__item
+    		font-size: 12px
+    		line-height: 1em
+    		font-family: 'Open Sans', sans-serif
+    		font-weight: 700
+    		text-transform: uppercase
+    		text-decoration: none
+    		color: #3b3b3b 
+    		padding: 7px 10px
+
+.form
+	flex: 4
+	height: 100vh
+	background: #fc5095
+	padding-left: 15px
+	display: flex
+	color: #fc5095
+	position: relative
+	align-items: flex-end
+	transition: all 0.5s
+	form
+		display: flex
+		flex-direction: column
+		height: 79%
+		overflow: hidden
+		letter-spacing: 0.5px
+		position: relative
+		width: 100%
+	&__title
+		color: #fc5095
+		color: CurrentColor
+		font: 700 32px/38px 'Open Sans', sans-serif
+		margin-bottom: 20px
+		text-transform: uppercase
+		max-width: 600px
+	&__item
+		background-color: #fff
+		min-height: 100%
+		overflow-y: scroll
+		padding: 100px 25px 10px 70px
+		::-webkit-scrollbar
+			display: none;
+	&__text
+		color: #3b3b3b
+		text-transform: uppercase
+		font: 600 24px/30px 'Open Sans', sans-serif
+		max-width: 600px
+	&__question
+		text-transform: uppercase
+		color: #3b3b3b
+		font: 700 34px/51px 'Open Sans', sans-serif
+		margin-top: 150px
+		margin-bottom: 20px
+	&__next-button
+		background: #fc5095
+		color: #fff
+		text-transform: uppercase
+		text-decoration: none
+		display: block
+		font-weight: 700 
+		line-height: 80px
+		font-family: 'Open Sans', sans-serif
+		border-radius: 15px
+		width: 280px
+		text-align: center
+	&__label-for-radio
+		border: 1px solid #d3d3d3
+		border-radius: 7px
+		text-align: center
+		color: #3b3b3b
+		font: 600 26px/80px 'Open Sans', sans-serif
+		transition: all 0.3s
+		cursor: pointer
+		display: flex
+		justify-content: center
+		align-items: center
+		&:hover			
+			color: #fff
+			background-color: #fc8950
+		&.one-in-row
+			display: block
+			width: 380px
+			margin-bottom: 17px
+		&.two-in-row
+			width: 48%
+		.icon, img
+			height: 40px
+			margin-right: 5px
+
+	&__list-choise
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		width: 450px;
+	&__label
+		color: #3b3b3b
+		font: 600 18px/27px 'Open Sans', sans-serif
+	&__input
+		font: 300 18px/27px 'Open Sans', sans-serif
+		color: #3b3b3b	
+		display: block
+		width: 450px
+		height: 80px
+		max-width: 100%
+		border-radius: 7px
+		outline: none
+		border: 1px solid #d3d3d3
+		padding-left: 15px
+	input[type="radio"]:checked+label 
+		color: #fff
+		background-color: #fc8950
+	&__input.error		
+		border: 1px solid #b72020
+		color: #b72020
+	&__button
+		color: #aaa9a9
+		border: 1px solid #1da7c0
+		border-radius: 15px
+		width: 285px
+		height: 80px
+		outline: none
+		background: #fff
+		text-transform: uppercase
+		letter-spacing: 0.75px
+		font: 700 26px/80px 'Open Sans', sans-serif
+		cursor: pointer
+		transition: all 0.3s
+		&:hover
+			color: #fff
+			background: #1da7c0
+			cursor: pointer
+
+	&__radio
+		display: none
+	&__label-accept
+		font: 13px 'MuseoSansCyrl', sans-serif
+		color: #000
+		max-width: 415px
+	&__accept-check
+		margin-right: 10px
+		color: #2c2c2c
+		margin-top: 1px
+	&__accept
+		display: flex
+		align-items: flex-start
+		outline: none
+		margin: 10px 0
+	&__heart
+		position: absolute
+		top: 29%
+		left: -32px
+		height: 80px
+		width: 80px
+		color: #fc5095
+		border: 10px solid CurrentColor
+		border-radius: 50%
+		z-index: 999
+		display: flex
+		align-items: center
+		justify-content: center
+		background: #fff
+		transition: all 0.5s
+
+.form__list-choise input[type="radio"]:checked+label, .form__list-choise .form__label-for-radio:hover
+	background: #1da7c0
+
+.font-size-s
+	font-size: 26px
+	margin-left: 50px
+	margin-top: 100px
+
+.font-size-m
+	font-size: 38px
+
+.heart-img
+	width: 38px
+
+.counter
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 99
+	background: rgba(255, 138, 75, 0.7)
+	opacity: 0
+	transition: all 0.5s
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	&__number
+		font: 800 340px/340px 'Open Sans', sans-serif
+		color: #fff
+	&__text
+		font: 800 40px 'Open Sans', sans-serif
+		color: #fff
+
+@media screen and (max-width: 1601px)
+	.form__question
+		margin-top: 50px
+	.menu .nav
+		padding: 7px 0
+		max-width: 650px
+	.font-size-s
+		margin-top: 50px
+	.form__item
+		padding-top: 50px
+		padding-bottom: 50px
+
+
+@media screen and (max-width: 1400px)
+	.form
+		&__title
+			font-size: 28px
+			line-height: 32px
+		&__text			
+			font-size: 20px
+			line-height: 25px
+		&__question
+			font-size: 30px
+			line-height: 40px
+		&__next-button
+			line-height: 70px
+			width: 250px
+		&__label-for-radio.one-in-row
+			width: 320px
+		&__label-for-radio
+			font-size: 23px
+			line-height: 65px
+			&.one-in-row
+				margin-bottom: 10px
+		&__heart
+			top: 25%
+
+	.font-size-m
+	    font-size: 34px
+	.counter
+		&__number
+			font-size: 250px
+			line-height: 250px
+		&__text
+			font-size: 35px
+			padding: 0 20px
