@@ -29,9 +29,9 @@ gulp.task('mincss', ['sass'], function () {
         .pipe(concatCss("bundle.css"))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(rename("bundle.min.css"))
-        .pipe(uncss({
-            html: ['./src/index.html']
-        }))
+        //.pipe(uncss({
+        //    html: ['./src/index.html']
+        //}))
         .pipe(gulp.dest('./src/css'));
 });
 
