@@ -1,281 +1,236 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800')
-
 @import 'font-face'
-@include fontFace('MuseoSansCyrl', '../fonts/MuseoSansCyrl-300')
+@import url('https://fonts.googleapis.com/css?family=Montserrat')
 
-body
-	font-size: 25px
-	font-family: "Open Sans"  
-	line-height: 1.4
+$black: #000
+$black-one: #141414
+$white: #fff
+$black-two: #353535
+$brownish-grey: #676767
+$gray: #979797
+$norm-wght: 500
+$padd-md: 25px
+$padd-xs: 20px
+
+*
+	font-family: 'Montserrat'
+	box-sizing: border-box
+
+.container
+	max-width: 1200px
+	padding: 0 15px
+	margin: 0 auto
+
+.block
+	&__title
+		color: $black-one
+		margin-top: 15px 
+		font-size: 32px
+		font-weight: $norm-wght
+	&__subtitle
+		color: $brownish-grey
+		max-width: 970px
+		font-size: 20px
+		line-height: 32px
+		margin-top: 15px
 
 
-.wrapper
-	display: flex
-	width: 100%
-	height: 100vh
-    
-.menu
-	display: flex
-	position: relative
-	flex: 5
-	align-items: flex-end
-	background: url(../img/bg.jpg) center left no-repeat
-	background-size: cover
-	&__container	
-		background: rgba(255, 255, 255, 0.75)
+.shedule
+	margin-top: 50px
+	&__heading
 		display: flex
-		position: relative
-		z-index: 9999
-		justify-content: center
-		width: 100%
-		min-height: 56px
-		align-items: center
-	.nav
-    	display: flex
-    	flex-wrap: wrap
-    	justify-content: space-between
-    	padding: 7px 165px;
-    	.nav__item
-    		font-size: 12px
-    		line-height: 1em
-    		font-family: 'Open Sans', sans-serif
-    		font-weight: 700
-    		text-transform: uppercase
-    		text-decoration: none
-    		color: #3b3b3b 
-    		padding: 7px 10px
-
-.form
-	flex: 4
-	height: 100vh
-	background: #fc5095
-	padding-left: 15px
-	display: flex
-	color: #fc5095
-	position: relative
-	align-items: flex-end
-	transition: all 0.5s
-	form
+		margin-bottom: 20px
+		h2
+			font-size: 24px
+			flex: 1			
+			margin-right: 30px
+			color: $black-one
+			font-weight: $norm-wght
+		>h2:last-child
+			margin-right: 0
+		
+	&__wrap
+		display: grid
+		border-top: solid 1px #979797
+		padding: 5px 0 20px
+		p
+			font-size: 16px
+			line-height: 24px
+			padding: 4px 0
+			margin-bottom: 2px
+			flex: 1
+		h3
+			font-size: 20px
+			line-height: 32px
+			font-weight: $norm-wght
+		p, h3
+			color: $black-two
+	&__body
 		display: flex
 		flex-direction: column
-		height: 79%
-		overflow: hidden
-		letter-spacing: 0.5px
-		position: relative
-		width: 100%
-	&__title
-		color: #fc5095
-		color: CurrentColor
-		font: 700 32px/38px 'Open Sans', sans-serif
-		margin-bottom: 20px
-		text-transform: uppercase
-		max-width: 600px
-	&__item
-		background-color: #fff
-		min-height: 100%
-		overflow-y: scroll
-		padding: 100px 25px 10px 70px
-		::-webkit-scrollbar
-			display: none;
-	&__text
-		color: #3b3b3b
-		text-transform: uppercase
-		font: 600 24px/30px 'Open Sans', sans-serif
-		max-width: 600px
-	&__question
-		text-transform: uppercase
-		color: #3b3b3b
-		font: 700 34px/51px 'Open Sans', sans-serif
-		margin-top: 150px
-		margin-bottom: 20px
-	&__next-button
-		background: #fc5095
-		color: #fff
-		text-transform: uppercase
-		text-decoration: none
-		display: block
-		font-weight: 700 
-		line-height: 80px
-		font-family: 'Open Sans', sans-serif
-		border-radius: 15px
-		width: 280px
-		text-align: center
-	&__label-for-radio
-		border: 1px solid #d3d3d3
-		border-radius: 7px
-		text-align: center
-		color: #3b3b3b
-		font: 600 26px/80px 'Open Sans', sans-serif
-		transition: all 0.3s
-		cursor: pointer
-		display: flex
-		justify-content: center
-		align-items: center
-		&:hover			
-			color: #fff
-			background-color: #fc8950
-		&.one-in-row
-			display: block
-			width: 380px
-			margin-bottom: 17px
-		&.two-in-row
-			width: 48%
-		.icon, img
-			height: 40px
-			margin-right: 5px
+		div
+			display: grid
+		flex: 1
+	&__body
+		flex: 3
 
-	&__list-choise
-		display: flex
-		flex-direction: row
-		justify-content: space-between
-		width: 450px;
-	&__label
-		color: #3b3b3b
-		font: 600 18px/27px 'Open Sans', sans-serif
-	&__input
-		font: 300 18px/27px 'Open Sans', sans-serif
-		color: #3b3b3b	
-		display: block
-		width: 450px
-		height: 80px
-		max-width: 100%
-		border-radius: 7px
-		outline: none
-		border: 1px solid #d3d3d3
+.col
+	&-3
+		padding-left: 165px
+		padding-right: 165px
+		.shedule__wrap
+			grid-template-columns: 0.32fr 0.68fr
+			grid-column-gap: 30px
+		.shedule__body
+			div
+				grid-template-columns: 0.5fr 0.5fr
+				grid-column-gap: 30px
+	&-4
 		padding-left: 15px
-	input[type="radio"]:checked+label 
-		color: #fff
-		background-color: #fc8950
-	&__input.error		
-		border: 1px solid #b72020
-		color: #b72020
-	&__button
-		color: #aaa9a9
-		border: 1px solid #1da7c0
-		border-radius: 15px
-		width: 285px
-		height: 80px
-		outline: none
-		background: #fff
-		text-transform: uppercase
-		letter-spacing: 0.75px
-		font: 700 26px/80px 'Open Sans', sans-serif
-		cursor: pointer
-		transition: all 0.3s
+		padding-right: 15px
+		.shedule__wrap
+			grid-template-columns: 0.235fr 0.765fr
+			grid-column-gap: 30px
+		.shedule__body
+			div
+				grid-template-columns: 0.333fr 0.333fr 0.333fr	
+				grid-column-gap: 30px	
+
+	&-5
+		padding-left: 15px
+		padding-right: 15px
+		.shedule__wrap
+			grid-template-columns: 0.181fr 0.819fr
+			grid-column-gap: 30px
+		.shedule__body
+			div
+				grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr
+				grid-column-gap: 30px
+
+.buttons__wrap
+	text-align: center
+	padding: 50px 0
+.button
+	font-size: 14px
+	line-height: 16px
+	padding: 14px 20px
+	border-radius: 5px
+	text-decoration: none
+	margin: 0 15px
+	outline: none
+	transition: all 0.3s
+	&-primary
+		color: $white
+		background: $brownish-grey
+		border: 1px solid #fff
 		&:hover
-			color: #fff
-			background: #1da7c0
-			cursor: pointer
+			color: $brownish-grey
+			background: $white
+			border-color: $brownish-grey
+	&-secondary
+		border: 1px solid $gray
+		color: $black
+		background: $white
+		&:hover
+			color: $white
+			background-color: $gray
+	&-link
+		color: $black-one
+		text-decoration: underline
+		font-size: 16px
+		display: inline-block
+		&:after
+			content: ""
+			display: inline-block
+			height: 14px
+			width: 16px
+			margin-left: 5px
+			margin-bottom: 4px
+			vertical-align: middle
+			background: url(../img/array.svg) center no-repeat
+			background-size: contain
+		&:hover
+			text-decoration: none
 
-	&__radio
-		display: none
-	&__label-accept
-		font: 13px 'MuseoSansCyrl', sans-serif
-		color: #000
-		max-width: 415px
-	&__accept-check
-		margin-right: 10px
-		color: #2c2c2c
-		margin-top: 1px
-	&__accept
-		display: flex
-		align-items: flex-start
-		outline: none
-		margin: 10px 0
-	&__heart
-		position: absolute
-		top: 29%
-		left: -32px
-		height: 80px
-		width: 80px
-		color: #fc5095
-		border: 10px solid CurrentColor
-		border-radius: 50%
-		z-index: 999
-		display: flex
-		align-items: center
-		justify-content: center
-		background: #fff
-		transition: all 0.5s
+@media (min-width: 992px) and (max-width: 1440px)
+	.container
+		max-width: 950px
 
-.form__list-choise input[type="radio"]:checked+label, .form__list-choise .form__label-for-radio:hover
-	background: #1da7c0
-
-.font-size-s
-	font-size: 26px
-	margin-left: 50px
-	margin-top: 100px
-
-.font-size-m
-	font-size: 38px
-
-.heart-img
-	width: 38px
-
-.counter
-	width: 100%
-	height: 100%
-	position: absolute
-	top: 0
-	left: 0
-	z-index: 99
-	background: rgba(255, 138, 75, 0.7)
-	opacity: 0
-	transition: all 0.5s
-	display: flex
-	flex-direction: column
-	align-items: center
-	justify-content: center
-	&__number
-		font: 800 340px/340px 'Open Sans', sans-serif
-		color: #fff
-	&__text
-		font: 800 40px 'Open Sans', sans-serif
-		color: #fff
-
-@media screen and (max-width: 1601px)
-	.form__question
-		margin-top: 50px
-	.menu .nav
-		padding: 7px 0
-		max-width: 650px
-	.font-size-s
-		margin-top: 50px
-	.form__item
-		padding-top: 50px
-		padding-bottom: 50px
-
-
-@media screen and (max-width: 1400px)
-	.form
+@media (min-width: 768px) and (max-width: 991px)
+	.block
 		&__title
-			font-size: 28px
-			line-height: 32px
-		&__text			
-			font-size: 20px
-			line-height: 25px
-		&__question
-			font-size: 30px
-			line-height: 40px
-		&__next-button
-			line-height: 70px
-			width: 250px
-		&__label-for-radio.one-in-row
-			width: 320px
-		&__label-for-radio
-			font-size: 23px
-			line-height: 65px
-			&.one-in-row
-				margin-bottom: 10px
-		&__heart
-			top: 25%
+			
 
-	.font-size-m
-	    font-size: 34px
-	.counter
-		&__number
-			font-size: 250px
-			line-height: 250px
-		&__text
-			font-size: 35px
-			padding: 0 20px
+	.shedule
+		&__heading 
+			margin-bottom: 15px
+			h2
+				font-size: 20px
+		&__wrap
+			h3
+				font-size: 18px
+				line-height: 24px
+			p
+				font-size: 14px
+				line-height: 16px
+				margin-bottom: 5px
+	.buttons
+		&__wrap
+			padding: $padd-md 0
+	
+	.container
+		padding-right: $padd-md
+		padding-left: $padd-md
+
+	.col-5
+		.shedule__wrap
+			grid-template-columns: 0.174fr 0.826fr
+
+@media (max-width: 767px)
+	.block
+		&__subtitle
+			display: none
+
+	.shedule
+		&__heading
+			display: none
+		&__wrap 
+			display: flex
+			flex-direction: column
+			p
+				margin: 0
+				padding: 0
+			h3
+				font-size: 18px
+				line-height: 24px
+		&__body 
+			display: none
+			padding-left: 40%
+			div
+				display: flex
+				flex-direction: column
+				margin: 15px 0 10px
+		&__subtitle
+			position: relative
+			&:after
+				position: absolute
+				content: ""
+				height: 24px
+				width: 12px
+				background: url("../img/array_accordeon.svg") center no-repeat
+				background-size: contain
+				top: 0
+				right: 12px
+				transition: all 0.3s
+			&.open:after
+				transform: rotate(180deg)
+
+	.container
+		padding-right: $padd-xs
+		padding-left: $padd-xs
+	
+	.button
+		width: 100%
+		margin: 25px 0 0	
+
+	.buttons__wrap
+		padding: 0 0 50px

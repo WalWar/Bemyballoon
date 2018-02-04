@@ -13,7 +13,8 @@ var gulp = require('gulp'),
     server = require('gulp-server-livereload'),
     cache = require('gulp-cache'),
     browsersync = require('browser-sync'),
-    watch = require('gulp-watch');
+    watch = require('gulp-watch'),
+    cssnano = require('gulp-cssnano');
  
 
 //Компиляция Sass - готов
@@ -29,9 +30,7 @@ gulp.task('mincss', ['sass'], function () {
         .pipe(concatCss("bundle.css"))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(rename("bundle.min.css"))
-        //.pipe(uncss({
-        //    html: ['./src/index.html']
-        //}))
+        .pipe(cssnano())
         .pipe(gulp.dest('./src/css'));
 });
 
