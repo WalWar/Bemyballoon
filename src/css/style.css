@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Marmelad|Open+Sans:400,600");
 body {
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  background: url("../img/bgall.png") center top no-repeat;
+  -webkit-background-size: 1920px 1920px;
+  background-size: 1920px; }
 
 .in {
   width: 1200px;
@@ -26,12 +29,13 @@ body {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  position: relative; }
   .header__top-menu ul li {
     font-family: 'Open Sans';
-    font-weight: 600;
+    font-weight: 400;
     font-size: 14px;
-    padding: 14px 4px 13px 23px; }
+    padding: 14px 6px 13px 23px; }
     .header__top-menu ul li:first-child {
       padding-left: 20px;
       padding-right: 7px; }
@@ -47,6 +51,25 @@ body {
       border-color: #b2b2b2 rgba(255, 212, 52, 0) rgba(255, 212, 52, 0);
       border-top-width: 4px;
       margin-left: 6px; }
+    .header__top-menu ul li ul {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      position: absolute;
+      top: 46px;
+      left: 0;
+      z-index: 99;
+      background: #fff; }
+      .header__top-menu ul li ul li {
+        display: block; }
+        .header__top-menu ul li ul li a {
+          color: #000;
+          text-decoration: none; }
+          .header__top-menu ul li ul li a img {
+            height: 14px;
+            width: 18px; }
 
 .header .right-bar {
   display: -webkit-box;

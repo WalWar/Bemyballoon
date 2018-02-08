@@ -2,8 +2,8 @@
 
 body
 	padding-bottom: 100px
-	//background: url("../img/bgall.png") center top no-repeat
-	//background-size: 1920px
+	background: url("../img/bgall.png") center top no-repeat
+	background-size: 1920px
 .in
 	width: 1200px
 	padding-left: 15px
@@ -21,11 +21,12 @@ body
 	&__top-menu
 		ul
 			display: flex
+			position: relative
 			li
 				font-family: 'Open Sans'
-				font-weight: 600
+				font-weight: 400
 				font-size: 14px
-				padding: 14px 4px 13px 23px
+				padding: 14px 6px 13px 23px
 				&:first-child
 					padding-left: 20px
 					padding-right: 7px
@@ -41,6 +42,22 @@ body
 					border-color: #b2b2b2 rgba(255, 212, 52, 0) rgba(255, 212, 52, 0)
 					border-top-width: 4px
 					margin-left: 6px
+				ul
+					flex-direction: column
+					position: absolute
+					top: 46px
+					left: 0
+					z-index: 99
+					background: #fff
+					li
+						display: block
+						a
+							color: #000
+							text-decoration: none
+							img
+								height: 14px
+								width: 18px
+
 	.right-bar
 		display: flex
 		position: absolute
