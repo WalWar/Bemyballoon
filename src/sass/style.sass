@@ -1,236 +1,242 @@
-@import 'font-face'
-@import url('https://fonts.googleapis.com/css?family=Montserrat')
+@import url('https://fonts.googleapis.com/css?family=Marmelad|Open+Sans:400,600');
 
-$black: #000
-$black-one: #141414
-$white: #fff
-$black-two: #353535
-$brownish-grey: #676767
-$gray: #979797
-$norm-wght: 500
-$padd-md: 25px
-$padd-xs: 20px
-
-*
-	font-family: 'Montserrat'
-	box-sizing: border-box
-
-.container
-	max-width: 1200px
-	padding: 0 15px
+body
+	padding-bottom: 100px
+	//background: url("../img/bgall.png") center top no-repeat
+	//background-size: 1920px
+.in
+	width: 1200px
+	padding-left: 15px
+	padding-right: 15px
 	margin: 0 auto
 
-.block
-	&__title
-		color: $black-one
-		margin-top: 15px 
-		font-size: 32px
-		font-weight: $norm-wght
-	&__subtitle
-		color: $brownish-grey
-		max-width: 970px
-		font-size: 20px
-		line-height: 32px
-		margin-top: 15px
-
-
-.shedule
-	margin-top: 50px
-	&__heading
+.header
+	&__top-block
 		display: flex
-		margin-bottom: 20px
-		h2
+		margin-top: 10px
+		border-top: 3px solid #e3a3cc
+		border-bottom: 1px solid #f0f0f0
+		justify-content: space-between
+		position: relative
+	&__top-menu
+		ul
+			display: flex
+			li
+				font-family: 'Open Sans'
+				font-weight: 600
+				font-size: 14px
+				padding: 14px 4px 13px 23px
+				&:first-child
+					padding-left: 20px
+					padding-right: 7px
+				a
+					font-family: 'Open Sans'
+					font-size: 14px
+				&.parent-elem:after
+					border: 3px solid transparent
+					content: ""
+					display: inline-block
+					height: 0
+					width: 0
+					border-color: #b2b2b2 rgba(255, 212, 52, 0) rgba(255, 212, 52, 0)
+					border-top-width: 4px
+					margin-left: 6px
+	.right-bar
+		display: flex
+		position: absolute
+		right: 0
+		top: 0
+		height: 46px
+		input
+			background: #fff url(../img/icons/loup.png) center left 9px no-repeat
+			font-size: 14px
+			padding-left: 35px
+			padding-top: 2px
+			&::-webkit-input-placeholder 
+				color:#bababa
+			&::-moz-placeholder          
+				color:#bababa
+			&:-moz-placeholder           
+				color:#bababa
+			&:-ms-input-placeholder      
+				color:#bababa
+	&__cart
+		button
+			height: 100%
+			background: #e3a3cc
+			padding: 0 10px 
+			font: 16px/30px 'Open Sans'
+			color: #fff
+			span
+				height: 30px
+				width: 30px
+				text-align: center
+				background: #d093ba
+				display: inline-block
+				border-radius: 50%
+				font: 18px/30px 'Open Sans'
+				color: #fff
+				padding: 0
+				margin-left: 20px
+			img
+				margin-right: 10px
+	&__search
+		input
+			width: 100px
+			height: 100%
+	&__info		
+		display: flex
+		justify-content: space-between
+		border-bottom: 1px solid #f0f0f0
+		>div
+			position: relative
+		span
+			font-family: 'Marmelad'
 			font-size: 24px
-			flex: 1			
-			margin-right: 30px
-			color: $black-one
-			font-weight: $norm-wght
-		>h2:last-child
-			margin-right: 0
-		
-	&__wrap
-		display: grid
-		border-top: solid 1px #979797
-		padding: 5px 0 20px
 		p
-			font-size: 16px
-			line-height: 24px
-			padding: 4px 0
-			margin-bottom: 2px
-			flex: 1
-		h3
-			font-size: 20px
-			line-height: 32px
-			font-weight: $norm-wght
-		p, h3
-			color: $black-two
-	&__body
-		display: flex
-		flex-direction: column
-		div
-			display: grid
-		flex: 1
-	&__body
-		flex: 3
-
-.col
-	&-3
-		padding-left: 165px
-		padding-right: 165px
-		.shedule__wrap
-			grid-template-columns: 0.32fr 0.68fr
-			grid-column-gap: 30px
-		.shedule__body
-			div
-				grid-template-columns: 0.5fr 0.5fr
-				grid-column-gap: 30px
-	&-4
-		padding-left: 15px
-		padding-right: 15px
-		.shedule__wrap
-			grid-template-columns: 0.235fr 0.765fr
-			grid-column-gap: 30px
-		.shedule__body
-			div
-				grid-template-columns: 0.333fr 0.333fr 0.333fr	
-				grid-column-gap: 30px	
-
-	&-5
-		padding-left: 15px
-		padding-right: 15px
-		.shedule__wrap
-			grid-template-columns: 0.181fr 0.819fr
-			grid-column-gap: 30px
-		.shedule__body
-			div
-				grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr
-				grid-column-gap: 30px
-
-.buttons__wrap
-	text-align: center
-	padding: 50px 0
-.button
-	font-size: 14px
-	line-height: 16px
-	padding: 14px 20px
-	border-radius: 5px
-	text-decoration: none
-	margin: 0 15px
-	outline: none
-	transition: all 0.3s
-	&-primary
-		color: $white
-		background: $brownish-grey
-		border: 1px solid #fff
-		&:hover
-			color: $brownish-grey
-			background: $white
-			border-color: $brownish-grey
-	&-secondary
-		border: 1px solid $gray
-		color: $black
-		background: $white
-		&:hover
-			color: $white
-			background-color: $gray
-	&-link
-		color: $black-one
-		text-decoration: underline
-		font-size: 16px
-		display: inline-block
+			color: #999
+			font-family: 'Open Sans'
+			font-size: 13px
+	&__logo
+		padding: 42px 0 39px
+		margin-right: 50px
+	&__delivery
+		padding-right: 76px
+		padding-top: 49px
+		&:before
+			position: absolute
+			content: ""
+			height: 37px
+			width: 37px
+			left: -50px
+			top: 55px
+			display: block
+			background: url("../img/icons/box.png") center no-repeat
+			background-size: contain
+	&__mobile
+		padding-right: 71px
+		padding-top: 49px
+		&:before
+			position: absolute
+			content: ""
+			height: 37px
+			width: 37px
+			left: -50px
+			top: 55px
+			display: block
+			background: url("../img/icons/mobile.png") center no-repeat
+			background-size: contain
+	&__whatsapp
+		padding-right: 73px
+		padding-top: 49px
+		&:before
+			position: absolute
+			content: ""
+			height: 37px
+			width: 37px
+			left: -50px
+			top: 55px
+			display: block
+			background: url("../img/icons/message.png") center no-repeat
+			background-size: contain
+	&__menu
+		padding-right: 55px
+		padding-left: 7px
+		border-bottom: 1px solid #f0f0f0
+		margin-bottom: 40px
+		ul
+			display: flex
+			justify-content: space-between
+			li
+				font-family: 'Open Sans'
+				font-size: 18px
+				padding: 21px 20px 24px
+				&:last-child
+					padding-right: 0
+				&:first-child
+					padding-left: 27px
+					padding-right: 13px
+				a
+					font-family: 'Open Sans'
+					font-size: 18px
+					text-decoration: none
+					color: #000
+					font-family: 'Marmelad'
+				&.parent-elem:after
+					border: 4px solid transparent
+					content: ""
+					display: inline-block
+					height: 0
+					width: 0
+					position: relative
+					top: 2px
+					border-color: #b2b2b2 rgba(255, 212, 52, 0) rgba(255, 212, 52, 0)
+					border-top-width: 6px
+					margin-left: 6px
+.flex
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+.slider
+	position: relative
+	.slick-prev, .slick-next
+		width: 50px
+		height: 50px
+		top: calc(50% - 25px)
+		position: absolute
+		z-index: 99
+		border-radius: 50%
+		font-size: 0
+		background: #fff
+	.slick-next
+		right: 57px
 		&:after
+			border: 5px solid transparent
 			content: ""
 			display: inline-block
-			height: 14px
-			width: 16px
-			margin-left: 5px
-			margin-bottom: 4px
-			vertical-align: middle
-			background: url(../img/array.svg) center no-repeat
-			background-size: contain
-		&:hover
-			text-decoration: none
-
-@media (min-width: 992px) and (max-width: 1440px)
-	.container
-		max-width: 950px
-
-@media (min-width: 768px) and (max-width: 991px)
-	.block
-		&__title
-			
-
-	.shedule
-		&__heading 
-			margin-bottom: 15px
-			h2
-				font-size: 20px
-		&__wrap
-			h3
-				font-size: 18px
-				line-height: 24px
-			p
-				font-size: 14px
-				line-height: 16px
-				margin-bottom: 5px
-	.buttons
-		&__wrap
-			padding: $padd-md 0
-	
-	.container
-		padding-right: $padd-md
-		padding-left: $padd-md
-
-	.col-5
-		.shedule__wrap
-			grid-template-columns: 0.174fr 0.826fr
-
-@media (max-width: 767px)
-	.block
-		&__subtitle
-			display: none
-
-	.shedule
-		&__heading
-			display: none
-		&__wrap 
-			display: flex
-			flex-direction: column
-			p
-				margin: 0
-				padding: 0
-			h3
-				font-size: 18px
-				line-height: 24px
-		&__body 
-			display: none
-			padding-left: 40%
-			div
-				display: flex
-				flex-direction: column
-				margin: 15px 0 10px
-		&__subtitle
+			height: 0
+			width: 0
 			position: relative
-			&:after
-				position: absolute
-				content: ""
-				height: 24px
-				width: 12px
-				background: url("../img/array_accordeon.svg") center no-repeat
-				background-size: contain
-				top: 0
-				right: 12px
-				transition: all 0.3s
-			&.open:after
-				transform: rotate(180deg)
-
-	.container
-		padding-right: $padd-xs
-		padding-left: $padd-xs
-	
-	.button
+			left: 1px
+			border-color: rgba(255, 212, 52, 0) rgba(255, 212, 52, 0) rgba(255, 212, 52, 0) #b2b2b2
+			border-left-width: 7px
+			margin-left: 6px
+			transition: all 0.3s
+		&:hover:after
+			left: 6px
+	.slick-prev
+		left: 55px		
+		&:after
+			border: 5px solid transparent
+			content: ""
+			display: inline-block
+			height: 0
+			width: 0
+			position: relative
+			left: 1px
+			border-color: rgba(255, 212, 52, 0) #b2b2b2 rgba(255, 212, 52, 0) rgba(255, 212, 52, 0) 
+			border-right-width: 7px
+			margin-right: 6px
+			transition: all 0.3s
+		&:hover:after
+			left: -4px
+	.slick-dots
+		position: absolute
+		left: 0
+		bottom: 28px
 		width: 100%
-		margin: 25px 0 0	
-
-	.buttons__wrap
-		padding: 0 0 50px
+		text-align: center
+		li
+			display: inline-block
+			margin: 10px
+			button	
+				font-size: 0
+				height: 3px
+				width: 88px
+				background: rgba(255, 255, 255, 0.44)
+				transition: all 0.3s
+			&.slick-active
+				button
+					background: #fff

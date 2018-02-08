@@ -21,7 +21,7 @@ var gulp = require('gulp'),
 gulp.task('sass', ['clean-css'], function () {
     return gulp.src('./src/sass/*.sass')
         .pipe(sass().on('error', sass.logError))
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        //.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest('./src/css'));
 });
 
@@ -48,7 +48,7 @@ gulp.task('autoprefix', ['mincss'], function () {
 gulp.task('scripts', function() {
     return gulp.src('./src/js/*.js')
     .pipe(concat('script.js'))
-    .pipe(uglyfly())
+    //.pipe(uglyfly())
     .pipe(gulp.dest('./src/js/'));
 });
 
