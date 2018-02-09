@@ -26,13 +26,21 @@ body
 				font-family: 'Open Sans'
 				font-weight: 400
 				font-size: 14px
-				padding: 14px 6px 13px 23px
+				padding: 14px 9.5px 13px 19px
+				position: relative
+				cursor: pointer
+				&:hover>a 
+					color: #e3a3cc
 				&:first-child
 					padding-left: 20px
 					padding-right: 7px
-				a
+				a, span
 					font-family: 'Open Sans'
 					font-size: 14px
+					line-height: 14px
+					display: inline-block
+					transition: all 0.1s
+					white-space: nowrap
 				&.parent-elem:after
 					border: 3px solid transparent
 					content: ""
@@ -41,22 +49,71 @@ body
 					width: 0
 					border-color: #b2b2b2 rgba(255, 212, 52, 0) rgba(255, 212, 52, 0)
 					border-top-width: 4px
-					margin-left: 6px
-				ul
-					flex-direction: column
+					border-bottom-width: 0
+					position: relative
+					top: -2px					
+					margin-left: 3px
+					margin-right: 3px
+					transition: all 0.3s
+				&.parent-elem:hover:before					
+					border: 4px solid transparent
 					position: absolute
-					top: 46px
-					left: 0
-					z-index: 99
-					background: #fff
-					li
-						display: block
-						a
-							color: #000
-							text-decoration: none
-							img
-								height: 14px
-								width: 18px
+					bottom: 0
+					left: calc(50% - 5px)
+					content: ""
+					display: block
+					height: 0
+					width: 0
+					border-color: rgba(255, 212, 52, 0)  rgba(255, 212, 52, 0) #eaeaea
+					border-bottom-width: 5px
+				&.parent-elem:hover:after
+					transform: rotate(-180deg)
+
+
+	.second-level, .third-level
+		display: none
+		flex-direction: column
+		position: absolute
+		top: 46px
+		padding: 10px 0 8px
+		left: 0
+		z-index: 99
+		background: #fff
+		border: 1px solid #eaeaea
+		min-width: 115px
+		li
+			display: block
+			padding: 0
+			&.active
+				opacity: 0.5
+			img 
+				margin-right: 7px
+				max-height: 14px
+			&:first-child
+				padding: 0
+			a, span
+				color: #000
+				width: 100%
+				padding: 7px 21px 9px 17px
+				text-decoration: none
+				display: flex
+				align-items: center
+				img
+					height: auto
+					max-width: 18px
+			a
+				span
+					display: inline-block
+					width: 18px
+					height: 18px
+					color: #fff
+					background-color: #e3a3cc
+					padding: 0
+					line-height: 18px
+					text-align: center
+					margin-left: 10px
+					border-radius: 50%
+					font-size: 12px
 
 	.right-bar
 		display: flex
@@ -69,6 +126,7 @@ body
 			font-size: 14px
 			padding-left: 35px
 			padding-top: 2px
+			font-family: 'Open Sans'
 			&::-webkit-input-placeholder 
 				color:#bababa
 			&::-moz-placeholder          
@@ -161,6 +219,47 @@ body
 		padding-left: 7px
 		border-bottom: 1px solid #f0f0f0
 		margin-bottom: 40px
+		.second-level
+			top: 69px
+			padding: 18px 0 21px
+			left: -53px
+			li
+				a
+					font-family: 'Open Sans'
+					font-weight: 400
+					font-size: 14px
+					padding: 0 35px 0 27px
+					position: relative
+					cursor: pointer
+				&:hover>a 
+					color: #e3a3cc
+				a, span
+					font-family: 'Open Sans'
+					font-size: 14px
+					line-height: 30px
+					display: inline-block
+					transition: all 0.1s
+					white-space: nowrap
+			.third-level
+				position: absolute
+				top: -12px
+				left: 80%
+				display: none
+			
+			.parent-item
+				a
+					&:after
+						border: 4px solid transparent
+						content: ""
+						display: inline-block
+						height: 0
+						width: 0
+						position: relative
+						top: -2px
+						border-color:  rgba(255, 212, 52, 0) #b2b2b2 rgba(255, 212, 52, 0) rgba(255, 212, 52, 0)
+						border-left-width: 6px
+						border-right-width: 0
+						margin-left: 6px	
 		ul
 			display: flex
 			justify-content: space-between
@@ -168,6 +267,7 @@ body
 				font-family: 'Open Sans'
 				font-size: 18px
 				padding: 21px 20px 24px
+				position: relative
 				&:last-child
 					padding-right: 0
 				&:first-child
@@ -186,10 +286,15 @@ body
 					height: 0
 					width: 0
 					position: relative
-					top: 2px
+					top: -2px
 					border-color: #b2b2b2 rgba(255, 212, 52, 0) rgba(255, 212, 52, 0)
 					border-top-width: 6px
+					border-bottom-width: 0
 					margin-left: 6px
+					transition: all 0.3s				
+				&.parent-elem:hover:after
+					transform: rotate(-180deg)
+
 .flex
 	display: -webkit-flex
 	display: -moz-flex

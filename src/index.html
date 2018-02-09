@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Landing Initium Group</title>
+    <title>Bemiballoon</title>
     <link rel="stylesheet" type="text/css" href="css/bundle.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 </head>
@@ -12,17 +12,30 @@
 		<div class="header__top-block">
 			<div class="header__top-menu">
 				<ul>
-					<li class="parent-elem">Eng
-						<ul>
-							<li><a href="#"><img src="img/united-kingdom.png" alt="">English</a></li>
-							<li><a href="#"><img src="img/united-arab-emirates.png" alt="">Arabic</a></li>
-							<li><a href="#"><img src="img/russia.png" alt="">Russian</a></li>
+					<li class="parent-elem dropped parent-elem">Eng
+						<ul class="second-level">
+							<li class="active"><span><img src="img/icons/united-kingdom.png" alt="">English</span></li>
+							<li><a href="#"><img src="img/icons/united-arab-emirates.png" alt="">Arabic</a></li>
+							<li><a href="#"><img src="img/icons/russia.png" alt="">Russian</a></li>
 						</ul>
 					</li>
-					<li class="parent-elem">US Dollar</li>
+					<li class="parent-elem dropped">US Dollar
+						<ul class="second-level">
+							<li><a href="">Euro</a></li>
+							<li><a href="">AED</a></li>
+							<li><a href="">Dollar</a></li>
+						</ul>
+					</li>
 					<li>Login</li>
 					<li>Register</li>
-					<li class="parent-elem">My account</li>
+					<li class="parent-elem dropped">My account
+						<ul class="second-level">
+							<li><a href=""><img src="img/icons/lock.png" alt="">Register</a></li>
+							<li><a href=""><img src="img/icons/key.png" alt="">Login</a></li>
+							<li><a href=""><img src="img/icons/face.png" alt="">My account</a></li>
+							<li><a href=""><img src="img/icons/hearth.png" alt="">Wish List <span>3</span></a> </li>
+						</ul>
+					</li>
 					<li>About us</li>
 					<li>Delivery</li>
 					<li>Contacts</li>
@@ -65,8 +78,37 @@
 		<div class="header__menu">
 			<ul>
 				<li><a href="">Home</a></li>
-				<li class="parent-elem"><a href="">Balloons</a></li>
-				<li class="parent-elem"><a href="">Event decoraticon</a></li>
+				<li class="parent-elem"><a href="">Balloons</a>
+					<ul class="second-level">
+						<li><a href="#">Helium latex ballon</a></li>
+						<li><a href="#">Hearts and stars</a></li>
+						<li><a href="">Helium foil balloon</a></li>
+						<li class="parent-item"><a href="">Helium bouquets</a>
+							<ul class="third-level">
+								<li><a href="#">Plain helium balloons</a></li>
+								<li><a href="#">Printed helium balloons</a></li>
+							</ul>
+						</li>
+						<li><a href="">Helium large balloon</a></li>
+						<li><a href="">Helium numbers and letter</a></li>
+						<li><a href="">Personalized ballons</a></li>
+					</ul>
+				</li>
+				<li class="parent-elem"><a href="">Event decoraticon</a>
+					<ul class="second-level">
+						<li><a href="#">Helium latex ballon</a></li>
+						<li><a href="#">Hearts and stars</a></li>
+						<li><a href="">Helium foil balloon</a></li>
+						<li class="parent-item"><a href="">Helium bouquets</a>
+							<ul class="third-level">
+								<li><a href="#">Plain helium balloons</a></li>
+								<li><a href="#">Printed helium balloons</a></li>
+							</ul>
+						</li>
+						<li><a href="">Helium large balloon</a></li>
+						<li><a href="">Helium numbers and letter</a></li>
+						<li><a href="">Personalized ballons</a></li>
+					</ul></li>
 				<li class="parent-elem"><a href="">Party supplies</a></li>
 				<li class="parent-elem"><a href="">Corporate</a></li>
 				<li class="parent-elem"><a href="">Ocassion</a></li>
@@ -87,6 +129,7 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>	
     <script type="" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="" src="js/script.js"></script>
 	<script>
 		$('.slider').slick({
 			dots: true,
