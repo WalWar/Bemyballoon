@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Landing Initium Group</title>
+    <title>Bemiballoon</title>
     <link rel="stylesheet" type="text/css" href="css/bundle.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 </head>
@@ -12,28 +12,97 @@
 		<div class="header__top-block">
 			<div class="header__top-menu">
 				<ul>
-					<li class="parent-elem">Eng</li>
-					<li class="parent-elem">US Dollar</li>
-					<li>Login</li>
-					<li>Register</li>
-					<li class="parent-elem">My account</li>
-					<li>About us</li>
-					<li>Delivery</li>
-					<li>Contacts</li>
-					<li>Instant payment</li>
+					<li class="parent-elem dropped parent-elem">Eng
+						<ul class="second-level">
+							<li class="active"><span><img src="img/icons/united-kingdom.png" alt="">English</span></li>
+							<li><a href="#"><img src="img/icons/united-arab-emirates.png" alt="">Arabic</a></li>
+							<li><a href="#"><img src="img/icons/russia.png" alt="">Russian</a></li>
+						</ul>
+					</li>
+					<li class="parent-elem dropped">US Dollar
+						<ul class="second-level">
+							<li><a href="">Euro</a></li>
+							<li><a href="">AED</a></li>
+							<li><a href="">Dollar</a></li>
+						</ul>
+					</li>
+					<li><a href="">Login</a></li>
+					<li><a href="">Register</a></li>
+					<li class="parent-elem dropped">My account
+						<ul class="second-level">
+							<li><a href=""><div><img src="img/icons/lock.png" alt=""></div>Register</a></li>
+							<li><a href=""><div><img src="img/icons/key.png" alt=""></div>Login</a></li>
+							<li><a href=""><div><img src="img/icons/face.png" alt=""></div>My account</a></li>
+							<li><a href=""><div><img src="img/icons/hearth.png" alt=""></div>Wish List <span>3</span></a> </li>
+						</ul>
+					</li>
+					<li><a href="">About us</a></li>
+					<li><a href="">Delivery</a></li>
+					<li><a href="">Contacts</a></li>
+					<li><a href="">Instant payment</a></li>
 				</ul>
 			</div>
 			<div class="right-bar">
 				<div class="header__search">
-					<input type="text" placeholder="Search">
+					<input id="search__input" type="text" placeholder="Search">
+					<span class="clear-input">&#9932</span>
+					<ul class="autosearch dropdown-menu">
+						<p>Результаты поиска</p>
+						<li><a href=""><span>Plain heli</span>um balloons</a></li>
+						<li><a href="">Plain helium</a></li>
+						<li><a href=""><span>Plain</span></a></li>
+					</ul>
 				</div>
 				<div class="header__cart">
-					<button><img src="/img/icons/cart.png" alt="">View cart <span>0</span></button>
-					<div class="header_modal-cart">
+					<button class="view__cart"><img src="img/icons/cart.png" alt="">View cart <span>0</span></button>
+					<div class="header__modal-cart">
 						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
+							<li>
+								<div class="cart__img">
+									<img src="img/product1.png" alt="">
+								</div>
+								<div class="cart__text">
+									<h3>The name of the item that occupies two lines</h3>
+									<div>
+										<span class="cart__price">$543.25</span>
+										<span class="cross">&#9932</span>
+										<input type="text" value="2">
+									</div>
+								</div>	
+								<a href="#" class="remove-item">&#9932</a>							
+							</li>
+							<li>
+								<div class="cart__img">
+									<img src="img/product2.png" alt="">
+								</div>
+								<div class="cart__text">
+									<h3>The name of the item</h3>
+									<div>
+										<span class="cart__price">$543.25</span>
+										<span class="cross">&#9932</span>
+										<input type="text" value="2">
+									</div>
+								</div>	
+								<a href="#" class="remove-item">&#9932</a>							
+							</li>
+							<li>
+								<div class="cart__img">
+									<img src="img/product3.png" alt="">
+								</div>
+								<div class="cart__text">
+									<h3>The name of the item that occupies two lines</h3>
+									<div>
+										<span class="cart__price">$543.25</span>
+										<span class="cross">&#9932</span>
+										<input type="text" value="2">
+									</div>
+								</div>	
+								<a href="#" class="remove-item">&#9932</a>							
+							</li>
+							<div class="cart__footer">
+								<span>Total: <span>$1 258</span></span>
+								<a href=""><img src="img/icons/cart.png" alt="">Checkout</a>
+							</div>
 						</ul>
 					</div>
 				</div>
@@ -41,7 +110,7 @@
 		</div>
 		<div class="header__info">
 			<div class="header__logo">
-				<a href="#"><img src="/img/logo.png" alt=""></a>
+				<a href="#"><img src="img/logo.png" alt=""></a>
 			</div>
 			<div class="header__mobile">
 				<span>050-359-9640</span>
@@ -59,28 +128,103 @@
 		<div class="header__menu">
 			<ul>
 				<li><a href="">Home</a></li>
-				<li class="parent-elem"><a href="">Balloons</a></li>
-				<li class="parent-elem"><a href="">Event decoraticon</a></li>
-				<li class="parent-elem"><a href="">Party supplies</a></li>
-				<li class="parent-elem"><a href="">Corporate</a></li>
-				<li class="parent-elem"><a href="">Ocassion</a></li>
-				<li class="parent-elem"><a href="">Gift ideas</a></li>
+				<li class="parent-elem"><a href="">Balloons</a>
+					<ul class="second-level">
+						<li><a href="#">Helium latex ballon</a></li>
+						<li><a href="#">Hearts and stars</a></li>
+						<li><a href="">Helium foil balloon</a></li>
+						<li class="parent-item"><a href="">Helium bouquets</a>
+							<ul class="third-level">
+								<li><a href="#">Plain helium balloons</a></li>
+								<li><a href="#">Printed helium balloons</a></li>
+							</ul>
+						</li>
+						<li><a href="">Helium large balloon</a></li>
+						<li class="parent-item"><a href="">Helium numbers and letter</a>
+							<ul class="third-level">
+								<li><a href="#">Plain helium balloons</a></li>
+								<li><a href="#">Printed helium balloons</a></li>
+							</ul>
+						</li>
+						<li><a href="">Personalized ballons</a></li>
+					</ul>
+				</li>
+				<li class="parent-elem"><a href="">Event decoraticon</a>
+					<ul class="second-level">
+						<li><a href="#">Helium latex ballon</a></li>
+						<li><a href="#">Hearts and stars</a></li>
+						<li><a href="">Helium foil balloon</a></li>
+						<li class="parent-item"><a href="">Helium bouquets</a>
+							<ul class="third-level">
+								<li><a href="#">Plain helium balloons</a></li>
+								<li><a href="#">Printed helium balloons</a></li>
+							</ul>
+						</li>
+						<li><a href="">Helium large balloon</a></li>
+						<li><a href="">Helium numbers and letter</a></li>
+						<li><a href="">Personalized ballons</a></li>
+					</ul>
+				</li>
+				<li class="parent-elem"><a href="">Party supplies</a>
+					<ul class="second-level">
+						<li><a href="#">Helium latex ballon</a></li>
+						<li><a href="#">Hearts and stars</a></li>
+						<li><a href="">Helium foil balloon</a></li>
+						<li><a href="">Personalized ballons</a></li>
+					</ul>
+				</li>
+				<li class="parent-elem"><a href="">Corporate</a>
+					<ul class="second-level">
+						<li><a href="#">Helium latex ballon</a></li>
+						<li class="parent-item"><a href="">Helium bouquets</a>
+							<ul class="third-level">
+								<li><a href="#">Plain helium balloons</a></li>
+								<li><a href="#">Printed helium balloons</a></li>
+							</ul>
+						</li>
+						<li><a href="">Helium large balloon</a></li>
+						<li><a href="">Helium numbers and letter</a></li>
+					</ul>
+				</li>
+				<li class="parent-elem"><a href="">Ocassion</a>
+					<ul class="second-level">
+						<li><a href="#">Helium latex ballon</a></li>
+						<li><a href="">Helium foil balloon</a></li>
+						<li class="parent-item"><a href="">Helium bouquets</a>
+							<ul class="third-level">
+								<li><a href="#">Plain helium balloons</a></li>
+							</ul>
+						</li>
+						<li><a href="">Helium large balloon</a></li>
+						<li><a href="">Personalized ballons</a></li>
+					</ul>
+				</li>
+				<li class="parent-elem"><a href="">Gift ideas</a>
+					<ul class="second-level">
+						<li><a href="">Helium large balloon</a></li>
+						<li><a href="">Helium numbers and letter</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 	</header>
 	<section class="slider in">
-		<div class="slider__item"><img src="/img/slide1.png" alt=""></div>
-		<div class="slider__item"><img src="/img/slide2.png" alt=""></div>
-		<div class="slider__item"><img src="/img/slide3.png" alt=""></div>
+		<div class="slider__item"><img src="img/slide1.png" alt=""></div>
+		<div class="slider__item"><img src="img/slide2.png" alt=""></div>
+		<div class="slider__item"><img src="img/slide3.png" alt=""></div>
 	</section>
 	<section>
 		
 	</section>
+
+	<div class="overflow"></div>	
+	<div class="overflow2"></div>
 	<script
   src="http://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>	
     <script type="" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="" src="js/script.js"></script>
 	<script>
 		$('.slider').slick({
 			dots: true,

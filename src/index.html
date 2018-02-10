@@ -26,33 +26,83 @@
 							<li><a href="">Dollar</a></li>
 						</ul>
 					</li>
-					<li>Login</li>
-					<li>Register</li>
+					<li><a href="">Login</a></li>
+					<li><a href="">Register</a></li>
 					<li class="parent-elem dropped">My account
 						<ul class="second-level">
-							<li><a href=""><img src="img/icons/lock.png" alt="">Register</a></li>
-							<li><a href=""><img src="img/icons/key.png" alt="">Login</a></li>
-							<li><a href=""><img src="img/icons/face.png" alt="">My account</a></li>
-							<li><a href=""><img src="img/icons/hearth.png" alt="">Wish List <span>3</span></a> </li>
+							<li><a href=""><div><img src="img/icons/lock.png" alt=""></div>Register</a></li>
+							<li><a href=""><div><img src="img/icons/key.png" alt=""></div>Login</a></li>
+							<li><a href=""><div><img src="img/icons/face.png" alt=""></div>My account</a></li>
+							<li><a href=""><div><img src="img/icons/hearth.png" alt=""></div>Wish List <span>3</span></a> </li>
 						</ul>
 					</li>
-					<li>About us</li>
-					<li>Delivery</li>
-					<li>Contacts</li>
-					<li>Instant payment</li>
+					<li><a href="">About us</a></li>
+					<li><a href="">Delivery</a></li>
+					<li><a href="">Contacts</a></li>
+					<li><a href="">Instant payment</a></li>
 				</ul>
 			</div>
 			<div class="right-bar">
 				<div class="header__search">
-					<input type="text" placeholder="Search">
+					<input id="search__input" type="text" placeholder="Search">
+					<span class="clear-input">&#9932</span>
+					<ul class="autosearch dropdown-menu">
+						<p>Результаты поиска</p>
+						<li><a href=""><span>Plain heli</span>um balloons</a></li>
+						<li><a href="">Plain helium</a></li>
+						<li><a href=""><span>Plain</span></a></li>
+					</ul>
 				</div>
 				<div class="header__cart">
-					<button><img src="img/icons/cart.png" alt="">View cart <span>0</span></button>
-					<div class="header_modal-cart">
+					<button class="view__cart"><img src="img/icons/cart.png" alt="">View cart <span>0</span></button>
+					<div class="header__modal-cart">
 						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
+							<li>
+								<div class="cart__img">
+									<img src="img/product1.png" alt="">
+								</div>
+								<div class="cart__text">
+									<h3>The name of the item that occupies two lines</h3>
+									<div>
+										<span class="cart__price">$543.25</span>
+										<span class="cross">&#9932</span>
+										<input type="text" value="2">
+									</div>
+								</div>	
+								<a href="#" class="remove-item">&#9932</a>							
+							</li>
+							<li>
+								<div class="cart__img">
+									<img src="img/product2.png" alt="">
+								</div>
+								<div class="cart__text">
+									<h3>The name of the item</h3>
+									<div>
+										<span class="cart__price">$543.25</span>
+										<span class="cross">&#9932</span>
+										<input type="text" value="2">
+									</div>
+								</div>	
+								<a href="#" class="remove-item">&#9932</a>							
+							</li>
+							<li>
+								<div class="cart__img">
+									<img src="img/product3.png" alt="">
+								</div>
+								<div class="cart__text">
+									<h3>The name of the item that occupies two lines</h3>
+									<div>
+										<span class="cart__price">$543.25</span>
+										<span class="cross">&#9932</span>
+										<input type="text" value="2">
+									</div>
+								</div>	
+								<a href="#" class="remove-item">&#9932</a>							
+							</li>
+							<div class="cart__footer">
+								<span>Total: <span>$1 258</span></span>
+								<a href=""><img src="img/icons/cart.png" alt="">Checkout</a>
+							</div>
 						</ul>
 					</div>
 				</div>
@@ -90,7 +140,12 @@
 							</ul>
 						</li>
 						<li><a href="">Helium large balloon</a></li>
-						<li><a href="">Helium numbers and letter</a></li>
+						<li class="parent-item"><a href="">Helium numbers and letter</a>
+							<ul class="third-level">
+								<li><a href="#">Plain helium balloons</a></li>
+								<li><a href="#">Printed helium balloons</a></li>
+							</ul>
+						</li>
 						<li><a href="">Personalized ballons</a></li>
 					</ul>
 				</li>
@@ -108,11 +163,48 @@
 						<li><a href="">Helium large balloon</a></li>
 						<li><a href="">Helium numbers and letter</a></li>
 						<li><a href="">Personalized ballons</a></li>
-					</ul></li>
-				<li class="parent-elem"><a href="">Party supplies</a></li>
-				<li class="parent-elem"><a href="">Corporate</a></li>
-				<li class="parent-elem"><a href="">Ocassion</a></li>
-				<li class="parent-elem"><a href="">Gift ideas</a></li>
+					</ul>
+				</li>
+				<li class="parent-elem"><a href="">Party supplies</a>
+					<ul class="second-level">
+						<li><a href="#">Helium latex ballon</a></li>
+						<li><a href="#">Hearts and stars</a></li>
+						<li><a href="">Helium foil balloon</a></li>
+						<li><a href="">Personalized ballons</a></li>
+					</ul>
+				</li>
+				<li class="parent-elem"><a href="">Corporate</a>
+					<ul class="second-level">
+						<li><a href="#">Helium latex ballon</a></li>
+						<li class="parent-item"><a href="">Helium bouquets</a>
+							<ul class="third-level">
+								<li><a href="#">Plain helium balloons</a></li>
+								<li><a href="#">Printed helium balloons</a></li>
+							</ul>
+						</li>
+						<li><a href="">Helium large balloon</a></li>
+						<li><a href="">Helium numbers and letter</a></li>
+					</ul>
+				</li>
+				<li class="parent-elem"><a href="">Ocassion</a>
+					<ul class="second-level">
+						<li><a href="#">Helium latex ballon</a></li>
+						<li><a href="">Helium foil balloon</a></li>
+						<li class="parent-item"><a href="">Helium bouquets</a>
+							<ul class="third-level">
+								<li><a href="#">Plain helium balloons</a></li>
+							</ul>
+						</li>
+						<li><a href="">Helium large balloon</a></li>
+						<li><a href="">Personalized ballons</a></li>
+					</ul>
+				</li>
+				<li class="parent-elem"><a href="">Gift ideas</a>
+					<ul class="second-level">
+						<li><a href="">Helium large balloon</a></li>
+						<li><a href="">Helium numbers and letter</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 	</header>
@@ -124,6 +216,9 @@
 	<section>
 		
 	</section>
+
+	<div class="overflow"></div>	
+	<div class="overflow2"></div>
 	<script
   src="http://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

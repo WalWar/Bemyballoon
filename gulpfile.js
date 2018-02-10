@@ -55,7 +55,7 @@ gulp.task('scripts', function() {
 
 //Сжатие изображений - готов
 gulp.task('images', () =>
-    gulp.src('./src/img/*')
+    gulp.src('./src/img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./build/img'))
 );
