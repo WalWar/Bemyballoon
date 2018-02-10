@@ -510,6 +510,8 @@ body {
       font-size: 18px;
       padding: 21px 20px 24px;
       position: relative; }
+      .header__menu ul li.active a {
+        color: #e3a3cc; }
       .header__menu ul li:last-child {
         padding-right: 0; }
       .header__menu ul li:first-child {
